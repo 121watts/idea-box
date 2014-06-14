@@ -45,4 +45,14 @@ class IdeaStoreTest < Minitest::Test
     IdeaStore.delete_all
   end
 
+  def test_delete_an_idea
+    id1 = IdeaStore.save Idea.new("song", "99 bottles of beer")
+    id2 = IdeaStore.save Idea.new("gift", "micky mouse belt")
+    id3 = IdeaStore.save Idea.new("dinner", "cheeseburger with bacon and avocado")
+
+    assert_equal ["dinner", "gift", "song"], IdeaStore.all.map(&:title).sort
+    IdeaStore.delete(id2)
+    assert_equal ["dinner", "song"], IdeaStore.all.map(&:title).sort
+  end
+
 end
