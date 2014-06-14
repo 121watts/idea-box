@@ -7,7 +7,7 @@ class Idea
   def initialize(title, description)
     @title       = title
     @description = description
-    @rank = 0
+    @rank        = 0
   end
 
   def like!

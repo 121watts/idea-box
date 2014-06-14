@@ -14,11 +14,11 @@ class IdeaStore
   end
 
   def self.find(id)
-    @all.find { |idea| idea.id == id }
+    all.find { |idea| idea.id == id }
   end
 
   def self.count
-    @all.length
+    all.length
   end
 
   def self.next_id
