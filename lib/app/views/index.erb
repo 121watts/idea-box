@@ -1,12 +1,13 @@
 <html>
   <body>
-    <h1>IdeaBox!</h1>
+    <h1>Idea Box!</h1>
     <form action='/' method='POST'>
       <p>
         Your Idea:
       </p>
-      <input type='text' name='idea[title]'/><br/>
-      <textarea name='idea[description]'></textarea><br/>
+      Title<input type='text' name='idea[title]'/><br/>
+      <textarea name='idea[description]' >Put idea here</textarea><br/>
+      Tags<input type='text' name='idea[tag]'/><br/>
       <input type='submit'/>
     </form>
 
@@ -18,9 +19,10 @@
             <input type='submit' value="+ some love"/>
                       (<%= idea.rank %>) loves </br>
           </form>
-          idea title: <%= idea.title %><br/>
-          <%= idea.description %>
-          <a href="/<%= idea.id %>/edit">Edit</a>
+          idea title:  <%= idea.title %><br/>
+          <%= idea.description %><br/>
+          tags: <%= idea.tag %><br/>
+          <a href="/<%= idea.id %>/edit">Edit</a><br/>
           <form action='/<%= idea.id %>' method='POST'>
             <input type="hidden" name="_method" value="DELETE">
             <input type='submit' value="delete"/>

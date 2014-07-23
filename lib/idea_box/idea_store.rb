@@ -17,7 +17,7 @@ class IdeaStore
     raw_ideas.each_with_index do |data, i|
       ideas << Idea.new(data.merge("id" => i))
     end
-    ideas
+    ideas.sort
   end
 
   def self.raw_ideas

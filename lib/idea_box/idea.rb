@@ -10,7 +10,7 @@ class Idea
     @title       = attributes["title"]
     @description = attributes["description"]
     @rank        = attributes["rank"] || 0
-    @tag         = tag
+    @tag         = attributes["tag"]
   end
 
   def <=>(other)
@@ -21,7 +21,8 @@ class Idea
     {
       "title" => title,
       "description" => description,
-      "rank" => rank
+      "rank" => rank,
+      "tag" => tag
     }
   end
 
