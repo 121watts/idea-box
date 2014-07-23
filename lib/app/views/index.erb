@@ -11,14 +11,14 @@
     </form>
 
     <h3>Existing Ideas</h3>
-    <ul>
+    <ol>
      <% ideas.each do |idea| %>
         <li>
           <form action='/<%= idea.id %>/like' method='POST' style="display: inline">
-            <%= idea.rank %> loves </br>
-            <input type='submit' value="+ some love"/></br>
+            <input type='submit' value="+ some love"/>
+                      (<%= idea.rank %>) loves </br>
           </form>
-          Idea Title: <%= idea.title %><br/>
+          idea title: <%= idea.title %><br/>
           <%= idea.description %>
           <a href="/<%= idea.id %>/edit">Edit</a>
           <form action='/<%= idea.id %>' method='POST'>
@@ -27,6 +27,6 @@
           </form>
         </li>
       <% end %>
-    </ul>
+    </l>
   </body>
 </html>
