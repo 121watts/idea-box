@@ -26,6 +26,11 @@ class IdeaStore
     end
   end
 
+  def self.find_tags(tag)
+    ideas = IdeaStore.all
+    ideas.find_all { |idea| idea.tag == tag }
+  end
+
   def self.delete(position)
     database.transaction do
       database['ideas'].delete_at(position)

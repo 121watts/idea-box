@@ -21,7 +21,7 @@
           </form>
           idea title:  <%= idea.title %><br/>
           <%= idea.description %><br/>
-          tags: <%= idea.tag %><br/>
+          tags: <a href="/<%= idea.tag %>"><%= idea.tag%></a><br/>
           <a href="/<%= idea.id %>/edit">Edit</a><br/>
           <form action='/<%= idea.id %>' method='POST'>
             <input type="hidden" name="_method" value="DELETE">
