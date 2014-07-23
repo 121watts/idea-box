@@ -15,9 +15,10 @@
      <% ideas.each do |idea| %>
         <li>
           <form action='/<%= idea.id %>/like' method='POST' style="display: inline">
-            <input type='submit' value="+"/>
+            <%= idea.rank %> loves </br>
+            <input type='submit' value="+ some love"/></br>
           </form>
-          <%= idea.title %><br/>
+          Idea Title: <%= idea.title %><br/>
           <%= idea.description %>
           <a href="/<%= idea.id %>/edit">Edit</a>
           <form action='/<%= idea.id %>' method='POST'>
