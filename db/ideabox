@@ -1,6 +1,11 @@
 ---
 ideas:
-- title: yay!
-  description: we are working now!
-- title: test
-  description: to see if
+- title: trying
+  description: to make this freaking work!
+  rank: 17
+- title: now
+  description: ive got a bunch of ideas
+  rank: 17
+- title: 'and '
+  description: now ive got a BILLION IDEAS!
+  rank: 18
