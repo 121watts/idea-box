@@ -22,13 +22,15 @@ h3 {
 }
 
 #my-list{
-    padding: 8px; /* Give the items some air to breathe */
+    padding: 8px;
+    padding-left: 1em;
 }
 
 #my-list > li {
     padding-right: .6em;
     margin: 1em 0;
     font-size: 1.5em;
+    padding-bottom: 1em;
 }
 
 #my-list > li > a{

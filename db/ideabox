@@ -5,16 +5,15 @@ ideas:
   rank: 2
   tags: words, words, one, mom
 - title: another
-  description: idea would be
+  description: and THIS ONE BIGGER!
   tags: super, duper, awesome
 - title: yet
   description: again MAKING THIS BIGGER!
   rank: 1
   tags: i'm, posting, ideas
 - title: 'even '
-  description: more ideas!
+  description: and this one isnt as big
   tags: and, then, some
 - title: one more
-  description: two
-  rank: 1
+  description: "two making this IDEA BIGGER\r\n"
   tags: words, one, super
