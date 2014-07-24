@@ -1,18 +1,20 @@
 ---
 ideas:
 - title: this is something
-  description: and another thing
-  rank: 5
-  tags: words, words, words
+  description: and another thing EDITED!
+  rank: 2
+  tags: words, words, one, mom
 - title: another
   description: idea would be
   tags: super, duper, awesome
 - title: yet
-  description: again
+  description: again MAKING THIS BIGGER!
+  rank: 1
   tags: i'm, posting, ideas
 - title: 'even '
   description: more ideas!
   tags: and, then, some
 - title: one more
   description: two
+  rank: 1
   tags: words, one, super

@@ -1,13 +1,11 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <html>
-        <body>
-          <h1>idea box!</h1>
+
+          <h1>edit your idea</h1>
           <form action='/<%= idea.id %>' method='POST'>
             <p>
               <% if idea.id %>
-                Edit your Idea:
               <% else %>
                 Your Idea:
               <% end %>
@@ -17,10 +15,9 @@
             <% end %>
             <input type='text' name='idea[title]' value="<%= idea.title %>" class='form-control'/><br/>
             <textarea name='idea[description]' class='form-control'><%= idea.description %></textarea><br/>
+            <input type='text' name='idea[tags]' value="<%= idea.tags %>" class='form-control'/><br/>
             <input type='submit' class="btn btn-primary pull-right"/>
           </form>
-        </body>
-      </html>
     </div>
   </div>
 </div>
