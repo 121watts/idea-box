@@ -17,3 +17,19 @@ h3 {
   text-align: left;
   color: white;
 }
+
+#my-list{
+    /*background: #f7f7f7;*/
+    padding: 8px; /* Give the items some air to breathe */
+}
+
+#my-list > li > a{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 1px 1px;
+}
+
+#my-list > li > a:hover{
+    color: lightgrey;
+    padding: 2px 2px;
+}

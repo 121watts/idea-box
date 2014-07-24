@@ -11,30 +11,29 @@
       <h3>existing ideas</h3>
     <div>
     </div>
-    <ol>
+    <ol id="my-list" >
      <% ideas.each do |idea| %>
         <li>
           <form action='/<%= idea.id %>/like' method='POST' style="display: inline">
-            <input type='submit' value="+ some love (<%= idea.rank %>)" class="btn btn-default"/>
-                       </br>
           </form>
-          idea title:  <%= idea.title %><br/>
+          title:  <%= idea.title %><br/>
           <%= idea.description %><br/>
           tags:
           <% idea.tags.split(", ").each do |tag|%>
              <a href="/<%= tag %>"><%= tag%></a>
           <% end %>
           <div>
-            <a href="/<%= idea.id %>/edit">Edit</a><br/>
+
           </div>
-          <form action='/<%= idea.id %>' method='POST'>
-            <input type="hidden" name="_method" value="DELETE">
+          <input type="hidden" name="_method" value="DELETE" class="btn btn-danger">
             <input type='submit' value="delete" class="btn btn-default"/>
+          <form action='/<%= idea.id %>' method='POST'>  <input type='submit' value="+ some love (<%= idea.rank %>)" class="btn btn-default"/>
+            <a href="/<%= idea.id %>/edit" class="btn btn-primary">edit</a><br/>
           </form>
         </li>
       <% end %>
     </ol>
-    </form>
     </div>
+    </form>
   </div>
 </div>

@@ -1,14 +1,14 @@
 ---
 ideas:
-- title: hello
-  description: world
-  rank: 4
-  tags: 1, 2, 3
-- title: making
-  description: an idea
+- title: how
+  description: 'does this '
   rank: 6
-  tags: do, you, work?
-- title: another idea
-  description: how come
-  rank: 5
-  tags: you, only, work, with, two, likes
+  tags: look, like, crap
+- title: 'another '
+  description: item
+  rank: 6
+  tags: goes, here
+- title: and
+  description: then
+  rank: 3
+  tags: another, goes, here
