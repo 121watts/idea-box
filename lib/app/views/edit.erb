@@ -1,21 +1,26 @@
-<html>
-  <body>
-    <h1>IdeaBox</h1>
-
-    <form action='/<%= idea.id %>' method='POST'>
-      <p>
-        <% if idea.id %>
-          Edit your Idea:
-        <% else %>
-          Your Idea:
-        <% end %>
-      </p>
-      <% if idea.id %>
-        <input type="hidden" name="_method" value="PUT" />
-      <% end %>
-      <input type='text' name='idea[title]' value="<%= idea.title %>"/><br/>
-      <textarea name='idea[description]'><%= idea.description %></textarea><br/>
-      <input type='submit'/>
-    </form>
-  </body>
-</html>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <html>
+        <body>
+          <h1>idea box!</h1>
+          <form action='/<%= idea.id %>' method='POST'>
+            <p>
+              <% if idea.id %>
+                Edit your Idea:
+              <% else %>
+                Your Idea:
+              <% end %>
+            </p>
+            <% if idea.id %>
+              <input type="hidden" name="_method" value="PUT" />
+            <% end %>
+            <input type='text' name='idea[title]' value="<%= idea.title %>" class='form-control'/><br/>
+            <textarea name='idea[description]' class='form-control'><%= idea.description %></textarea><br/>
+            <input type='submit' class="btn btn-primary pull-right"/>
+          </form>
+        </body>
+      </html>
+    </div>
+  </div>
+</div>

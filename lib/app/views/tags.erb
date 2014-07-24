@@ -1,24 +1,37 @@
-<html>
-  <body>
-    <h1>here are your '<%= tag %>' ideas</h1>
-    <form action='/' method='POST'>
-
-    <h3>ideas by tags</h3>
-    <ul type=none> <% ideas.each do |idea| %>
-        <li>
-          </form>
-          idea title: <%= idea.title %><br/>
-          <%= idea.description %><br/>
-          <% idea.tags.split(", ").each do |tag|%>
-             <a href="/<%= tag %>"><%= tag%></a>
-          <% end %>
-          <div>
-          <a href="/<%= idea.id %>/edit">Edit</a><br/>
-          </div>
-          <form action='/<%= idea.id %>' method='POST'>
-          </form>
-        </li>
-      <% end %>
-    </ul>
-  </body>
-</html>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <html>
+        <body>
+          <h1>here are your '<%= tag %>' ideas</h1>
+              <ol id="my-list" class="col-xs-6"> <% ideas.each do |idea| %>
+                <li id ="idea-text" >
+                    idea title: <%= idea.title %><br/>
+                    <%= idea.description %><br/>
+                    <% idea.tags.split(", ").each do |tag|%>
+                       <a href="/<%= tag %>"><%= tag%></a>
+                    <% end %>
+                  <div id="button">
+                    <form action='/<%= idea.id %>/like' method='POST' style="display: inline">
+                      <input type='submit' value="+ some love (<%= idea.rank %>)" class="btn btn-primary btn-xs btn-block">
+                    </form>
+                  </div>
+                  <div id="button">
+                    <form action='/<%= idea.id %>' method='POST'>
+                      <input type="hidden" name="_method" value="DELETE" class="btn btn-danger">
+                      <input type='submit' value="delete" class="btn btn-danger btn-xs btn-block">
+                    </form>
+                  </div>
+                  <div id="button" >
+                    <form action='/<%= idea.id %>' method='POST'>
+                      <a href="/<%= idea.id %>/edit" class="btn btn-default btn-xs btn-block">edit</a>
+                    </form>
+                  </div>
+                </li>
+                <% end %>
+              </ol>
+        </body>
+      </html>
+    </div>
+  </div>
+</div>

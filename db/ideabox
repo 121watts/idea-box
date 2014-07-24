@@ -1,14 +1,18 @@
 ---
 ideas:
-- title: how
-  description: 'does this '
-  rank: 6
-  tags: look, like, crap
-- title: 'another '
-  description: item
-  rank: 13
-  tags: goes, here
-- title: and
-  description: then
-  rank: 6
-  tags: another, goes, here
+- title: this is something
+  description: and another thing
+  rank: 5
+  tags: words, words, words
+- title: another
+  description: idea would be
+  tags: super, duper, awesome
+- title: yet
+  description: again
+  tags: i'm, posting, ideas
+- title: 'even '
+  description: more ideas!
+  tags: and, then, some
+- title: one more
+  description: two
+  tags: words, one, super

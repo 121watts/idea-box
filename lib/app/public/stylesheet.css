@@ -11,25 +11,42 @@ body {
 h1 {
   text-align: center;
   color: white;
+  font-size: 3em;
 }
 
 h3 {
   text-align: left;
   color: white;
+  font-size: 2.7em;
+
 }
 
 #my-list{
-    /*background: #f7f7f7;*/
     padding: 8px; /* Give the items some air to breathe */
 }
 
+#my-list > li {
+    padding-right: .6em;
+    margin: 1em 0;
+    font-size: 1.5em;
+}
+
 #my-list > li > a{
-    color: #ffffff;
-    text-decoration: none;
-    padding: 1px 1px;
+    color: #FFFFFF;
+    text-decoration: underline;
+    padding: 3px 3px;
+
 }
 
 #my-list > li > a:hover{
     color: lightgrey;
-    padding: 2px 2px;
+}
+
+#idea-text {
+  color: #ffffff;
+}
+
+#button {
+  margin-top: .2em;
+  margin-bottom: .2em;
 }
