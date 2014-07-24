@@ -7,7 +7,7 @@
       <textarea name='idea[description]' placeholder='put idea here' class='form-control'/></textarea><br/>
       <input type='text' name='idea[tags]' placeholder='tags, tags, tags' class='form-control'/><br/>
       <input type='submit' class="btn btn-primary pull-right"/>
-
+      </form>
       <h3>existing ideas</h3>
     <div>
     </div>
@@ -15,6 +15,7 @@
      <% ideas.each do |idea| %>
         <li>
           <form action='/<%= idea.id %>/like' method='POST' style="display: inline">
+            <input type='submit' value="+ some love (<%= idea.rank %>)" class="btn btn-default">
           </form>
           title:  <%= idea.title %><br/>
           <%= idea.description %><br/>
@@ -25,15 +26,14 @@
           <div>
 
           </div>
-          <input type="hidden" name="_method" value="DELETE" class="btn btn-danger">
-            <input type='submit' value="delete" class="btn btn-default"/>
-          <form action='/<%= idea.id %>' method='POST'>  <input type='submit' value="+ some love (<%= idea.rank %>)" class="btn btn-default"/>
+          <form action='/<%= idea.id %>' method='POST'>
+            <input type="hidden" name="_method" value="DELETE" class="btn btn-danger">
+            <input type='submit' value="delete" class="btn btn-default">
             <a href="/<%= idea.id %>/edit" class="btn btn-primary">edit</a><br/>
           </form>
         </li>
       <% end %>
     </ol>
     </div>
-    </form>
   </div>
 </div>
