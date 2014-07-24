@@ -15,3 +15,6 @@ ideas:
 - title: another
   description: Put idea here
   tag: a
+- title: hello
+  description: Put idea here
+  tag: c
