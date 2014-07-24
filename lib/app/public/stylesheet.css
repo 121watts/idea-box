@@ -1,0 +1,19 @@
+* {
+  font-family: Helvetica;
+  font-weight: bold;
+}
+
+body {
+  background: url("/images/paper11.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+h3 {
+  text-align: left;
+  color: white;
+}

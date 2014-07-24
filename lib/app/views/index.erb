@@ -1,31 +1,40 @@
-<html>
-  <body>
-    <h1>idea box!</h1>
-    <form action='/' method='POST'>
-      <input type='text' name='idea[title]' placeholder='title'/><br/>
-      <textarea name='idea[description]' placeholder='put idea here'></textarea><br/>
-      <input type='text' name='idea[tag]' placeholder='tags, tags, tags'/><br/>
-      <input type='submit'/>
-    </form>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>idea box!</h1>
+      <form action='/' method='POST'>
+      <input type='text' name='idea[title]' placeholder='title' class='form-control'/><br/>
+      <textarea name='idea[description]' placeholder='put idea here' class='form-control'/></textarea><br/>
+      <input type='text' name='idea[tags]' placeholder='tags, tags, tags' class='form-control'/><br/>
+      <input type='submit' class="btn btn-primary pull-right"/>
 
-    <h3>existing ideas</h3>
+      <h3>existing ideas</h3>
+    <div>
+    </div>
     <ol>
      <% ideas.each do |idea| %>
         <li>
           <form action='/<%= idea.id %>/like' method='POST' style="display: inline">
-            <input type='submit' value="+ some love"/>
-                      (<%= idea.rank %>) loves </br>
+            <input type='submit' value="+ some love (<%= idea.rank %>)" class="btn btn-default"/>
+                       </br>
           </form>
           idea title:  <%= idea.title %><br/>
           <%= idea.description %><br/>
-          tags: <a href="/<%= idea.tag %>"><%= idea.tag%></a><br/>
-          <a href="/<%= idea.id %>/edit">Edit</a><br/>
+          tags:
+          <% idea.tags.split(", ").each do |tag|%>
+             <a href="/<%= tag %>"><%= tag%></a>
+          <% end %>
+          <div>
+            <a href="/<%= idea.id %>/edit">Edit</a><br/>
+          </div>
           <form action='/<%= idea.id %>' method='POST'>
             <input type="hidden" name="_method" value="DELETE">
-            <input type='submit' value="delete"/>
+            <input type='submit' value="delete" class="btn btn-default"/>
           </form>
         </li>
       <% end %>
-    </l>
-  </body>
-</html>
+    </ol>
+    </form>
+    </div>
+  </div>
+</div>

@@ -1,20 +1,26 @@
 ---
 ideas:
-- title: idea
-  description: i am one!
-  tag: here we go!
-- title: another
-  description: Put idea here
-  tag: b
-- title: another
-  description: Put idea here
-  tag: c
-- title: another
-  description: Put idea here
-  tag: a
-- title: another
-  description: Put idea here
-  tag: a
 - title: hello
-  description: Put idea here
-  tag: c
+  description: world
+  rank: 4
+  tags: 1, 2, 3
+- title: making
+  description: an idea
+  rank: 6
+  tags: do, you, work?
+- title: another idea
+  description: how come
+  rank: 5
+  tags: you, only, work, with, two, likes
+- title: ''
+  description: ''
+  tags: ''
+- title: ''
+  description: ''
+  tags: ''
+- title: ''
+  description: ''
+  tags: ''
+- title: ''
+  description: ''
+  tags: ''

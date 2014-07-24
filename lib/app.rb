@@ -33,9 +33,8 @@ class IdeaBoxApp < Sinatra::Base
   end
 
   get '/:tag' do |tag|
-    "i'm a tag!"
     ideas = IdeaStore.find_tags(tag)
-    erb :tags, locals: {ideas: ideas}
+    erb :tags, locals: {ideas: ideas, tag: tag}
   end
 
   put '/:id' do |id|

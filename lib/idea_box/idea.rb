@@ -3,14 +3,14 @@ require 'yaml/store'
 class Idea
 
   include Comparable
-  attr_reader :title, :description, :id, :rank, :tag
+  attr_reader :title, :description, :id, :rank, :tags
 
   def initialize(attributes)
     @id          = attributes["id"]
     @title       = attributes["title"]
     @description = attributes["description"]
     @rank        = attributes["rank"] || 0
-    @tag         = attributes["tag"]
+    @tags        = attributes["tags"]
   end
 
   def <=>(other)
@@ -22,7 +22,7 @@ class Idea
       "title" => title,
       "description" => description,
       "rank" => rank,
-      "tag" => tag
+      "tags" => tags
     }
   end
 

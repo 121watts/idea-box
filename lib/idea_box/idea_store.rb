@@ -28,7 +28,7 @@ class IdeaStore
 
   def self.find_tags(tag)
     ideas = IdeaStore.all
-    ideas.find_all { |idea| idea.tag == tag }
+    ideas.find_all { |idea| idea.tags.include?(tag) }
   end
 
   def self.delete(position)
